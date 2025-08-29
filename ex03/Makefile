@@ -1,0 +1,58 @@
+SRC_DIR = src
+INCLUDE_DIR = include
+OBJ_DIR = obj
+
+NAME = interface
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+SRC_FILES =\
+	main.cpp\
+	Character.cpp\
+	Cure.cpp\
+	Ice.cpp\
+	MateriaSource.cpp\
+	AMateria.cpp\
+
+INC_FILES =\
+	Character.hpp\
+	ICharacter.hpp\
+	Cure.hpp\
+	Ice.hpp\
+	IMateriaSource.hpp\
+	MateriaSource.hpp\
+	AMateria.hpp\
+
+SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
+OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.cpp=.o))
+INCS = $(addprefix $(INCLUDE_DIR)/, $(INC_FILES))
+
+OBJS = $(SRCS:.cpp=.o)
+RM = rm -rf
+
+all: $(NAME)
+
+$(NAME): $(OBJ_FILES)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ_FILES)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(INCS) | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -I$(INCLUDE_DIR)
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+clean:
+	$(RM) $(OBJ_DIR)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+debug:
+	@echo "Debugging information:\n"
+	@echo ".cpp files: $(SRC_FILES)\n"
+	@echo ".o files: $(OBJ_FILES)\n"
+	@echo ".hpp files: $(INC_FILES)\n"
+	@echo "dirs: $(SRC_DIR) $(INCLUDE_DIR) $(OBJ_DIR)\n"
+
+.PHONY: all clean fclean re

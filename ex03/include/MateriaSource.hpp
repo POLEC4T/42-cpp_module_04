@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 02:42:05 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/29 09:38:41 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/08/29 10:13:39 by miloniemaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IMATERIASOURCE_HPP
-# define IMATERIASOURCE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 # include "AMateria.hpp"
-# include <string>
+# include "IMateriaSource.hpp"
 
-class IMateriaSource
+class MateriaSource : public IMateriaSource
 {
+    private:
+        static const int _nbMaxMaterias = 4;
+		AMateria *_materias[_nbMaxMaterias];
+
     public:
-        virtual ~IMateriaSource() {}
-        virtual void learnMateria(AMateria*) = 0;
-        virtual AMateria* createMateria(std::string const & type) = 0;
+        MateriaSource();
+        virtual ~MateriaSource();
+        MateriaSource & operator=(const MateriaSource& other);
+        MateriaSource(const MateriaSource& copy);
+            
+        virtual void learnMateria(AMateria*);
+        virtual AMateria* createMateria(std::string const & type);
 };
 
 #endif

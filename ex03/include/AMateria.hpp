@@ -6,7 +6,7 @@
 /*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 02:32:58 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/21 02:57:15 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/08/29 10:08:43 by miloniemaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <iostream>
 # include "ICharacter.hpp"
 
-class AMateria
-{
+class ICharacter;
+class AMateria {
     protected:
         std::string _type;
 
