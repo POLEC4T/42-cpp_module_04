@@ -13,17 +13,17 @@
 #ifndef WRONGCAT_HPP
 # define WRONGCAT_HPP
 
-# include "WrongAnimal.hpp"
+# include "./WrongAnimal.hpp"
 # include <string>
 
 class WrongCat: public WrongAnimal {
-    public:
-        WrongCat();
-        WrongCat&operator=(const WrongCat& other);
-        WrongCat(const WrongCat& copy);
-        virtual ~WrongCat();
+	public:
+		WrongCat();
+		WrongCat&operator=(const WrongCat& other);
+		WrongCat(const WrongCat& copy);
+		virtual ~WrongCat();
 
-        void makeSound() const;
+		void makeSound() const;
 };
 
 #endif

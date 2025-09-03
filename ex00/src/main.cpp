@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 02:47:44 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/14 01:37:53 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 16:40:37 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "../include/Dog.hpp"
+#include "../include/Cat.hpp"
+#include "../include/WrongAnimal.hpp"
+#include "../include/WrongCat.hpp"
 
 int main()
 {
@@ -32,17 +32,14 @@ int main()
 
     std::cout << "---------Wrongs---------" << std::endl;
 
-    const WrongAnimal* wrongAnimal = new WrongAnimal();
     const WrongAnimal* wrongCat = new WrongCat();
 
     std::cout << "--" << std::endl;
     std::cout << wrongCat->getType() << " " << std::endl;
     wrongCat->makeSound();
-    wrongAnimal->makeSound();
     std::cout << "--" << std::endl;
 
 
-    delete(wrongAnimal);
     delete(wrongCat);
 
     return 0;

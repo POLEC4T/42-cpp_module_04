@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 01:52:58 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/14 01:38:08 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 16:38:05 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "./Animal.hpp"
 # include <string>
 
 class Dog : public Animal{
