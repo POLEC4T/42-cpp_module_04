@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 08:40:00 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/29 10:35:44 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 19:33:24 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void Character::_initMaterias() {
 	for (int i = 0; i < _nbMaxMaterias; i++) {
-		_materias[i] = nullptr;
+		_materias[i] = 0;
 	}
 }
 
 void Character::_deleteMaterias() {
 	for (int i = 0; i < _nbMaxMaterias; i++) {
-		if (_materias[i] != nullptr)
+		if (_materias[i] != 0)
 			delete _materias[i];
 	}
 }
@@ -63,19 +63,32 @@ std::string const & Character::getName() const {
 
 void Character::equip(AMateria* m) {
 	for (int i = 0; i < _nbMaxMaterias; i++) {
-		if (_materias[i] == nullptr) {
+		if (_materias[i] == 0) {
 			_materias[i] = m;
 			return;
 		}
 	}
+	std::cout << "Cannot equip: Inventory full" << std::endl;
 }
 
 void Character::unequip(int idx) {
-	// todo save the materia left on the floor to
-	// delete it later
-	_materias[idx] = nullptr;
+	if (idx < 0 || idx >= _nbMaxMaterias) {
+		std::cout << "Cannot unequip: Index out of range" << std::endl;
+		return ;
+	}
+	_materias[idx] = 0;
 }
 
 void Character::use(int idx, ICharacter& target) {
+	if (idx < 0 || idx >= _nbMaxMaterias) {
+		std::cout << "Cannot use: Index out of range" << std::endl;
+		return ;
+	}
+	if (_materias[idx] == 0) {
+		std::cout << "Cannot use: No materia equipped" << std::endl;
+		return ;
+	}
+
 	_materias[idx]->use(target);
+
 }

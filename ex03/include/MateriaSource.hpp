@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 02:42:05 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/29 10:13:39 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 19:28:04 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class MateriaSource : public IMateriaSource
 {
     private:
-        static const int _nbMaxMaterias = 4;
-		AMateria *_materias[_nbMaxMaterias];
+        static const int _nbMaxLearnedMaterias = 4;
+		AMateria *_learnedMaterias[_nbMaxLearnedMaterias];
 
     public:
         MateriaSource();

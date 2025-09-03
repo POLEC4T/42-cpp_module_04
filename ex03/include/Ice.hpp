@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 05:02:10 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/29 10:34:26 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 19:03:01 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Ice : public AMateria {
 		~Ice();
 
 		Ice(std::string const & type);
-        std::string const & getType() const;
         virtual AMateria* clone() const;
         virtual void use(ICharacter& target);
 
