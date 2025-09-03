@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 02:18:49 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/14 03:25:30 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 17:09:51 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,9 @@ std::string Animal::getType() const
 }
 
 void Animal::makeSound() const {}
+
+void Animal::addIdea(const std::string &idea) {
+	(void) idea;
+}
+
+void Animal::showIdeas() const {}

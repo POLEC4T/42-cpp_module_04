@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 02:47:44 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/14 03:27:27 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 17:52:25 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <sstream>
 
 int main() {
-    const int N = 4;
+    const int N = 2;
     Animal* animals[N];
 
     std::cout << "\n---creating animals list: ---\n";
@@ -32,8 +32,12 @@ int main() {
         std::ostringstream oss;
         oss << "Idea " << (i + 1);
         animals[i]->addIdea(oss.str());
-        animals[i]->showIdeas();
     }
+	for (int i = 0; i < N; ++i) {
+		std::cout << animals[i]->getType() << " says: ";
+		animals[i]->makeSound();
+		animals[i]->showIdeas();
+	}
 
     std::cout << "\n---deleting animals list: ---\n";
     for (int i = 0; i < N; i++)
