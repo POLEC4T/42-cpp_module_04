@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 02:01:32 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/14 03:05:11 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/03 18:03:06 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "../include/Brain.hpp"
 
 Brain::Brain() {
     _currSize = 0;

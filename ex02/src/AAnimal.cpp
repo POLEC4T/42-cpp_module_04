@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#include "../include/AAnimal.hpp"
 
 AAnimal::AAnimal() : _type("AAnimal") {
     std::cout << _type << " created" << std::endl;
@@ -38,5 +38,3 @@ std::string AAnimal::getType() const
 {
     return (_type);
 }
-
-void AAnimal::makeSound() const {}
