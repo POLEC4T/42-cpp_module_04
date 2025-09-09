@@ -6,11 +6,11 @@
 /*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 02:18:49 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/09/03 17:09:51 by mniemaz          ###   ########.fr       */
+/*   Updated: 2025/09/08 16:55:23 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "../include/Animal.hpp"
 
 Animal::Animal() : _type("Animal") {
     std::cout << _type << " created" << std::endl;
@@ -41,8 +41,6 @@ std::string Animal::getType() const
 
 void Animal::makeSound() const {}
 
-void Animal::addIdea(const std::string &idea) {
-	(void) idea;
-}
+void Animal::addIdea(const std::string &idea) { (void) idea; }
 
 void Animal::showIdeas() const {}
