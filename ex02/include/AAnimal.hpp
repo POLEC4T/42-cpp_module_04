@@ -26,7 +26,7 @@ class AAnimal {
         virtual ~AAnimal();
 
         virtual void makeSound() const = 0;
-        virtual std::string getType() const;
+        std::string getType() const;
         virtual void addIdea(const std::string& idea) = 0;
         virtual void showIdeas() const = 0;
 

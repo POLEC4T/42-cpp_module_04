@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miloniemaz <mniemaz@student.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: mniemaz <mniemaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 05:28:43 by miloniemaz        #+#    #+#             */
-/*   Updated: 2025/08/29 10:03:01 by miloniemaz       ###   ########.fr       */
+/*   Updated: 2025/09/08 12:41:58 by mniemaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,14 @@
 class Character : public ICharacter {
 	private:
 		static const int _nbMaxMaterias = 4;
+		static const int _nbMaxUnequiped = 100;
 		std::string _name;
 		AMateria *_materias[_nbMaxMaterias];
-		
-		void _initMaterias();
-		void _deleteMaterias();
+		AMateria *_unequiped[_nbMaxUnequiped];
+
+		void _initCharacter();
+		void _deleteAll();
+		void copyAll(const Character &c);
 
 	public:
 		Character();
