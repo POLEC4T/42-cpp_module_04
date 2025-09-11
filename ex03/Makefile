@@ -48,11 +48,4 @@ fclean: clean
 
 re: fclean all
 
-debug:
-	@echo "Debugging information:\n"
-	@echo ".cpp files: $(SRC_FILES)\n"
-	@echo ".o files: $(OBJ_FILES)\n"
-	@echo ".hpp files: $(INC_FILES)\n"
-	@echo "dirs: $(SRC_DIR) $(INCLUDE_DIR) $(OBJ_DIR)\n"
-
 .PHONY: all clean fclean re
